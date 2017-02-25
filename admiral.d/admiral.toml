@@ -1,0 +1,47 @@
+[admiral]
+items = ["left", "workspaces",
+         "center", "title",
+         "right", "battery", "padding", "network", "padding", "volume", "padding", "clock", "padding", "hostname"]
+
+[workspaces]
+path = "./workspaces.sh"
+
+[title]
+path = "xtitle -s -i | scroller -o -p -l 50"
+
+[clock]
+path = "date '+%-I:%M%p'"
+reload = 1
+
+[hostname]
+path = "./hostname.sh"
+static = true
+
+[volume]
+path = "./volume.sh"
+reload = 1
+
+[network]
+path = "./networkname.sh"
+reload = 3
+
+[battery]
+path = "./battery.sh"
+reload = 3
+
+# Used for formatting lemonbar
+[padding]
+path = "echo '   '"
+static = true
+
+[left]
+path = "echo '%{l}'"
+static = true
+
+[center]
+path = "echo '%{c}'"
+static = true
+
+[right]
+path = "echo '%{r}'"
+static = true
